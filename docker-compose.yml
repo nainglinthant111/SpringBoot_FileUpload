@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  user:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mongo
+    ports:
+      - "8010:8080"
+    volumes:
+      - ./src/main/resources/application.yml:/app/application.yml # Adjust the path based on your project structure
+
+
+    # Add other service configurations as needed
